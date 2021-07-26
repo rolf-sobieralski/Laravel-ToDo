@@ -22,3 +22,9 @@ Route::get('/todo', function () {
 Route::get('/addItem', function () {
     return view('createitem');
 });
+Route::get('/projects', function(){
+    return view('projects');
+});
+Route::get('/todos/{slug}',function($slug){
+    return view('todos', ['project', $slug]);
+});
