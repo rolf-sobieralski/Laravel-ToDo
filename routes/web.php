@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +18,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/todo', function () {
-    return view('todolist');
+Route::get('/todo/{slug}', function ($slug) {
+    return view('viewitem',['todo', $slug]);
 });
 Route::get('/addItem', function () {
     return view('createitem');
 });
-Route::get('/projects', function(){
+Route::get('/projects', function () {
     return view('projects');
 });
-Route::get('/todos/{slug}',function($slug){
+Route::get('/todos/{slug}', function ($slug) {
     return view('todos', ['project', $slug]);
 });
+Route::get('/register',[RegisterController::class, 'create']);
+Route::post('/register',[RegisterController::class, 'store']);

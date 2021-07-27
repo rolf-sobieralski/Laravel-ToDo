@@ -15,7 +15,7 @@ class CreateTodosTable extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
-            $table->integer('projectid');
+            $table->foreignId('project_id');
             $table->string('headline');
             $table->string('description');
             $table->boolean('completed');

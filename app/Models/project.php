@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class project extends Model
 {
     use HasFactory;
+
+    public function todos(){
+        return $this->hasMany(todo::class);
+    }
 }

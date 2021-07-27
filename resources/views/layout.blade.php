@@ -22,7 +22,7 @@
     </head>
     <body class="antialiased">
         <div id="HeadLine">
-            <h1>Laravel To-Do List</h1>
+            <h1>Laravel To-Do Liste</h1>
         </div>
         <div id="Container">
             @yield('content')
