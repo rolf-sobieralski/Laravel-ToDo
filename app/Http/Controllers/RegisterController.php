@@ -18,5 +18,6 @@ class RegisterController extends Controller
         ]);
         var_dump($attr);
         User::create($attr);
+
     }
 }

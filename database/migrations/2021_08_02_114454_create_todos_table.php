@@ -19,6 +19,7 @@ class CreateTodosTable extends Migration
             $table->String('name');
             $table->String('slug');
             $table->text('description');
+            $table->boolean('completed');
             $table->timestamps();
         });
     }

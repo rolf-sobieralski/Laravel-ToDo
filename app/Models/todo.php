@@ -9,6 +9,14 @@ class Todo extends Model
 {
     use HasFactory;
 
+        protected $fillable = [
+        'project_id',
+        'name',
+        'slug',
+        'description',
+        'completed'
+    ];
+
     public function project(): BelongsTo
     {
         return $this->belongsTo(project::class, 'project_id', 'id');

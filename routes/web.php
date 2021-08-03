@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use app\Http\Controllers;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TodoController;
 
 /*
 |--------------------------------------------------------------------------
