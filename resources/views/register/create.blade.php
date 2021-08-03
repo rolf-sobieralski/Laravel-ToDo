@@ -3,11 +3,9 @@
     <div>
     <input type="text" name="name" placeholder="Dein Name"></input>
     </div><div>
-    <input type="text" name="mail" placeholder="E-Mail Adresse"></input>
+    <input type="text" name="email" placeholder="E-Mail Adresse"></input>
     </div><div>
-    <input type="password" name="pass" placeholder="Passwort"></input>
-    </div><div>
-    <input type="password" name="passrepeat" placeholder="Wiederholung"></input>
+    <input type="password" name="password" placeholder="Passwort"></input>
     </div><div>
     <input type="submit" value="Senden"></input>
     </div>

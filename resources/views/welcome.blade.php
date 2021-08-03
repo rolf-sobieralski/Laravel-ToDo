@@ -1,5 +1,3 @@
-@extends('layout')
-@section('content')
 <div id="Login">
     <form>
         <div id="UserName">
@@ -13,4 +11,3 @@
         </div>
     </form>
 </div>
-@endsection

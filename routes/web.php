@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use app\Http\Controllers;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,17 +19,15 @@ use App\Http\Controllers\RegisterController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/todo/{slug}', function ($slug) {
-    return view('viewitem',['todo', $slug]);
-});
-Route::get('/addItem', function () {
-    return view('createitem');
-});
-Route::get('/projects', function () {
-    return view('projects');
-});
-Route::get('/todos/{slug}', function ($slug) {
-    return view('todos', ['project', $slug]);
-});
+
+Route::get('/projects', [ProjectController::class,'list']);
+Route::post('/projects',[ProjectController::class,'store']);
+Route::get('/project/{slug}', [ProjectController::class, 'show']);
+
+Route::get('/todos',[TodoController::class,'list']);
+Route::post('/todos',[TodoController::class,'store']);
+Route::get('/todo/{slug}', [TodoController::class,'show']);
+
+
 Route::get('/register',[RegisterController::class, 'create']);
 Route::post('/register',[RegisterController::class, 'store']);

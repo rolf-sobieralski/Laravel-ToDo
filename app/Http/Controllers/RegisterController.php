@@ -13,13 +13,10 @@ class RegisterController extends Controller
     public function store(){
         $attr = request()->validate([
             'name'=>'required|max:255|min:6',
-            'mail'=>'required|email|max:255|min:6',
-            'pass'=>'required|max:255|min:8',
-            'passrepeat'=>'required|max:255|min:8'
+            'email'=>'required|email|max:255|min:6',
+            'password'=>'required|max:255|min:8'
         ]);
-        $credentials['name'] = $attr['name'];
-        $credentials['email'] = $attr['mail'];
-        $credentials['password'] = $attr['pass'];
-        User::create($credentials);
+        var_dump($attr);
+        User::create($attr);
     }
 }
