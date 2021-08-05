@@ -14,8 +14,14 @@ p.pcompleted {
     margin-bottom: 0vh;
     margin-top: 0vh;
 }
+p.errorp {
+    color: red;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
 div.LoginContainer {
-    height: 30vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
