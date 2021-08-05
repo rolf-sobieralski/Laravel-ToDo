@@ -22,7 +22,6 @@ Route::get('/', function () {
 })->middleware('guest');
 Route::post('/logout',[SessionController::class,'logout']);
 Route::post('/login',[SessionController::class,'doLogin'])->middleware('guest');
-
 Route::get('/projects', [ProjectController::class,'list'])->middleware('auth');
 Route::post('/projects',[ProjectController::class,'store'])->middleware('auth');
 Route::get('/projects/{pid}/todos',[TodoController::class,'list'])->middleware('auth');
@@ -32,3 +31,4 @@ Route::post('/projects/{pid}/todo/{tid}/complete',[TodoController::class,'comple
 
 Route::get('/register',[RegisterController::class, 'create'])->middleware('guest');
 Route::post('/register',[RegisterController::class, 'store'])->middleware('guest');
+

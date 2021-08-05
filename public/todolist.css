@@ -7,33 +7,63 @@ h1.HeadlineText {
     margin-right: auto;
     width: max-content;
 }
+p.pcompleted {
+    font-size: 1.5vh;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+    margin-bottom: 0vh;
+    margin-top: 0vh;
+}
 div.LoginContainer {
+    height: 30vh;
     display: block;
-    width: 20vw;
-    margin: auto;
-    height: 50vh;
-    background: #bbddff;
-    border: solid white;
-    border-radius: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+div.RegisterLinkContainer {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.RegisterFormContainer {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 div.LoginInputContainer {
-    display: block;
-    margin: auto;
+    background: #bbddff;
+    border-radius: 2vh;
+    border: solid;
+}
+div.loginPositionContainer {
+    padding-top: 1vh;
+    padding-bottom: 2vh;
 }
 div.Container {
     display: table;
+    width: 100vw;
+    height: 80vh;
 }
 div.LoggedinContainer {
-    display: table-row;
+    display: block;
+    width: inherit;
 }
 div.FormTableRow {
-    display: table-row;
+    display: block;
+    background: #e2e8f0;
 }
 div.CreateProjectForm {
     display: table-cell;
+    width: 30vw;
 }
 div.CreateTodoForm {
     display: table-cell;
+    width: 65vw;
 }
 div.DisplayItemRow {
     display: table-row;
@@ -44,15 +74,47 @@ div.ProjectsTodoItems {
 div.ProjectTodosList {
     display: table-cell;
 }
+div.completedTimeContainer {
+    display: table-cell;
+    padding-left: 1vw;
+}
+div.todolink {
+    display: table-cell;
+}
+div.notCompletedContainer {
+    display: table-cell;
+    padding-left: 1vw;
+}
+div.todolist {
+    padding-bottom: 2vh;
+}
+div.itemViewContainer {
+    width: 33vw;
+}
 input.UserNameInput {
     width: 80%;
     display: block;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
-    height: 10vh;
+    height: 6vh;
     text-align: center;
-    border: solid 1px #cacaca;
+    border: solid 1px #2a2a2a;
+    font-size: 2vh;
+}
+input.TodoCompletedButton {
+    background: #d2d8fa;
+    height: 4vh;
+    width: 4vw;
+    border: solid 1px darkblue;
+    border-radius: 1vh;
+}
+input.CreateTodoNameInput {
+    margin-bottom: 2vh;
+    width: 30%;
+    height: 80%;
+    min-height: 3vh;
+    border: solid 1px darkblue;
 }
 input.PassInput {
     width: 80%;
@@ -60,10 +122,41 @@ input.PassInput {
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
-    height: 10vh;
+    height: 6vh;
     text-align: center;
-    border: solid 1px #cacaca;
+    border: solid 1px #2a2a2a;
+    font-size: 2vh;
 }
+input.RegisterNameInput {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3.5vh;
+    text-align: center;
+    border: solid 1px #2a2a2a;
+    font-size: 2vh;
+}
+input.RegisterMailInput {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3.5vh;
+    text-align: center;
+    border: solid 1px #2a2a2a;
+    font-size: 2vh;
+    margin-top: 2vh;
+}
+input.RegisterPassInput {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3.5vh;
+    text-align: center;
+    border: solid 1px #2a2a2a;
+    font-size: 2vh;
+    margin-top: 2vh;
+}
+
 input.SendButton {
     width: 60%;
     display: block;
@@ -72,5 +165,67 @@ input.SendButton {
     margin-right: auto;
     height: 8vh;
     text-align: center;
-    border: solid 1px #cacaca;
+    border: solid 1px #2a2a2a;
+    font-size: 3vh;
+    background: #a6ffff;
+}
+input.RegisterSubmitButton {
+    width: 60%;
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 5vh;
+    text-align: center;
+    border: solid 1px #2a2a2a;
+    font-size: 3vh;
+    background: #a6ffff;
+}
+input.logoutInput {
+    background: #aaaaaa;
+    border: solid 1px darkblue;
+    border-radius: 1vh;
+    margin-bottom: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+input.projectSubmitButton {
+    margin-bottom: 2vh;
+    width: 30%;
+    height: 80%;
+    min-height: 3vh;
+    border: solid 1px darkblue;
+    border-radius: 1vh;
+}
+input.projectNameInput {
+    margin-bottom: 2vh;
+    width: 30%;
+    height: 80%;
+    min-height: 3vh;
+    border: solid 1px darkblue;
+}
+input.CreateTodoSubmitButton {
+    margin-bottom: 2vh;
+    width: 30%;
+    height: 80%;
+    min-height: 3vh;
+    border: solid 1px darkblue;
+    border-radius: 1vh;
+}
+textarea.CreateTodoDescInput {
+    margin-bottom: 2vh;
+    width: 30%;
+    min-height: 3vh;
+    border: solid 1px darkblue;
+}
+form {
+    padding-left: 1vw;
+}
+a {
+    padding-left: 1vw;
+    color: blue !important;
+}
+a:hover {
+    color: red !important;
 }

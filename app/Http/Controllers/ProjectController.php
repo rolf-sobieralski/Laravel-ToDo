@@ -14,7 +14,7 @@ class ProjectController extends Controller
         $attr['user_id'] = auth()->user()->id;
         $attr['slug'] = $this->createSlug($attr['name']);
         Project::create($attr);
-        $this->list();
+        return $this->list();
     }
 
     public function list(){

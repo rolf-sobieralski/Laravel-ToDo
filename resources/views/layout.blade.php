@@ -18,17 +18,25 @@
         <div class="HeadLine">
             <h1 class="HeadlineText">Laravel To-Do Liste</h1>
         </div>
-        <div class="Container">
-
             @if (auth()->check())
                 <div class='LoggedinContainer'>
                 <form method="POST" action="/logout">
                     @csrf
-                    <input type="submit" value="abmelden"></input>
+                    <input type="submit" class="logoutInput" value="abmelden"></input>
                 </form>
                 </div>
             @endif
-            @yield('content')
+        <div class="Container">
+        <div style="display: table-row;height: 12vh;background: #e2e8f0;">
+            <div style="display: table-cell;">@yield('projectsform')</div>
+            <div style="display: table-cell;">@yield('todosform')</div>
+            <div style="display: table-cell;"></div>
+        </div>
+        <div style="display: table-row;">
+            <div style="display: table-cell;width: 33vw;">@yield('projectelements')</div>
+            <div style="display: table-cell;width: 33vw;">@yield('todoelements')</div>
+            <div style="display: table-cell;width: 33vw;">@yield('singletodo')</div>
+        </div>
         </div>
     </body>
 </html>

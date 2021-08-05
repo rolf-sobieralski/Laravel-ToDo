@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 
 class SessionController extends Controller
 {
@@ -13,7 +12,7 @@ class SessionController extends Controller
             'password'=>'required|max:255|min:8'
         ]);
         if(auth()->attempt($attr)){
-            redirect('/projects')->send();
+            return back();
         }else{
             return back()->withInput()->withErrors(['email'=>'Zugangsdaten falsch']);
         }
