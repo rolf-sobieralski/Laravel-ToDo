@@ -19,17 +19,17 @@ use App\Http\Controllers\SessionController;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware('guest');
+});
 Route::post('/logout',[SessionController::class,'logout']);
 Route::get('/login',[SessionController::class,'login'])->middleware('guest');
 Route::post('/login',[SessionController::class,'doLogin'])->middleware('guest');
 
 Route::get('/projects', [ProjectController::class,'list'])->middleware('auth');
 Route::post('/projects',[ProjectController::class,'store'])->middleware('auth');
-Route::get('/projects/{slug}/todos',[TodoController::class,'list'])->middleware('auth');
-Route::post('/projects/{slug}/todos',[TodoController::class,'store'])->middleware('auth');
-Route::get('/projects/{slug1}/todo/{slug2}', [TodoController::class,'show'])->middleware('auth');
-
+Route::get('/projects/{pid}/todos',[TodoController::class,'list'])->middleware('auth');
+Route::post('/projects/{pid}/todos',[TodoController::class,'store'])->middleware('auth');
+Route::get('/projects/{pid}/todo/{tid}', [TodoController::class,'show'])->middleware('auth');
+Route::post('/projects/{pid}/todo/{tid}/complete',[TodoController::class,'complete'])->middleware('auth');
 
 Route::get('/register',[RegisterController::class, 'create'])->middleware('guest');
 Route::post('/register',[RegisterController::class, 'store'])->middleware('guest');
