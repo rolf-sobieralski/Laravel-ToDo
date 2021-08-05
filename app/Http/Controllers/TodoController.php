@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 use App\Models\Todo;
 class TodoController extends Controller
 {
-    public function show($slug){
+    public function show($project,$todo){
 
     }
 
-    public function list(){
+    public function list($project){
         return view('todos.list');
     }
 
-    public function store(){
+    public function store($project){
         $attr = request()->validate([
             'project_id'=>'required',
             'name'=>'required|max:255|min:6',

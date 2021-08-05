@@ -1,13 +1,12 @@
+@if (!auth()->check())
 <div id="Login">
-    <form>
-        <div id="UserName">
-            <input type="text" id="UserName" name="user" placeholder="Benutzername"></input>
-        </div>
-        <div id="Password">
-            <input type="password" id="Pass" name="Pass" placeholder="Passwort"></input>
-        </div>
-        <div id="SendButton">
-            <input type="submit" value="Login"></input>
-        </div>
-    </form>
+    <a href="/login">anmelden</a>
 </div>
+@else
+    <div id='Login'>
+    <form method="POST" action="/logout">
+        @csrf
+        <input type="submit" value="abmelden"></input>
+    </form>
+    </div>
+@endif

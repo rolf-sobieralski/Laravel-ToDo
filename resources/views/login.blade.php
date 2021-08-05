@@ -1,7 +1,8 @@
 @extends('layout')
 @section('content')
 <div id="Login">
-    <form>
+    <form method="post" action="/login">
+        @csrf
         <div id="UserName">
             <input type="text" id="UserName" name="user" placeholder="Benutzername"></input>
         </div>
