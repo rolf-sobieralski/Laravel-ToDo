@@ -1,3 +1,5 @@
+@extends('layout')
+@section('content')
 <form method="POST" action="/projects">
     @csrf
     <div>
@@ -5,9 +7,10 @@
     </div><div>
     <input type="submit" value="Senden"></input>
     </div>
+</form>
     @foreach ($projects as $project)
         <div class="projectlist">
         <a href="/projects/{!! $project->slug !!}/todos">{!! $project->name !!}</a>
         </div>
     @endforeach
-</form>
+@endsection

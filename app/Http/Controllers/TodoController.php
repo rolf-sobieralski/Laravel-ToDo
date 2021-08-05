@@ -23,9 +23,10 @@ class TodoController extends Controller
     }
 
     public function list($projectslug){
+        $projects = Project::all()->where('user_id',auth()->user()->id);
         $project = Project::firstWhere('user_id',auth()->user()->id)->firstWhere('slug',$projectslug);
         $todos = Todo::all()->where('project_id', $project->id);
-        return view('todos.list',['project_id'=>$project->id, 'project'=>$projectslug,'todos'=>$todos]);
+        return view('todos.list',['project_id'=>$project->id, 'project'=>$project,'todos'=>$todos, 'projects'=>$projects]);
     }
 
     public function store($projectslug){

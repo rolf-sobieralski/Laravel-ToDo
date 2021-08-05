@@ -1,0 +1,76 @@
+body {
+    font-family: "Nunito", sans-serif;
+}
+h1.HeadlineText {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+div.LoginContainer {
+    display: block;
+    width: 20vw;
+    margin: auto;
+    height: 50vh;
+    background: #bbddff;
+    border: solid white;
+    border-radius: 1vw;
+}
+div.LoginInputContainer {
+    display: block;
+    margin: auto;
+}
+div.Container {
+    display: table;
+}
+div.LoggedinContainer {
+    display: table-row;
+}
+div.FormTableRow {
+    display: table-row;
+}
+div.CreateProjectForm {
+    display: table-cell;
+}
+div.CreateTodoForm {
+    display: table-cell;
+}
+div.DisplayItemRow {
+    display: table-row;
+}
+div.ProjectsTodoItems {
+    display: table-cell;
+}
+div.ProjectTodosList {
+    display: table-cell;
+}
+input.UserNameInput {
+    width: 80%;
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10vh;
+    text-align: center;
+    border: solid 1px #cacaca;
+}
+input.PassInput {
+    width: 80%;
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10vh;
+    text-align: center;
+    border: solid 1px #cacaca;
+}
+input.SendButton {
+    width: 60%;
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 8vh;
+    text-align: center;
+    border: solid 1px #cacaca;
+}

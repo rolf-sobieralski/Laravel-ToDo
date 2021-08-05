@@ -19,9 +19,8 @@ use App\Http\Controllers\SessionController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('guest');
 Route::post('/logout',[SessionController::class,'logout']);
-Route::get('/login',[SessionController::class,'login'])->middleware('guest');
 Route::post('/login',[SessionController::class,'doLogin'])->middleware('guest');
 
 Route::get('/projects', [ProjectController::class,'list'])->middleware('auth');
